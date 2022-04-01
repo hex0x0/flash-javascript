@@ -203,3 +203,33 @@ console.log(usuarioLoc.atual);
 usuarioLoc.atual = 2;
 
 console.log(usuarioLoc.atual);
+
+
+//Salvando o estado das propriedades
+
+
+let amor = {
+
+   nome:'ana', 
+   idade:38, 
+   peso:90
+
+}
+
+//Extraindo as propriedades nome e idade do objeto amor
+let { nome, idade } = amor;
+
+console.log(nome, idade);
+
+//Depois posso dar outro nome à variável
+
+
+let {peso:excessoDeGostosura} = amor;
+
+console.log(excessoDeGostosura);
+
+
+
+
+
+
