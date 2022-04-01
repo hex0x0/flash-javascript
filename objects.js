@@ -128,3 +128,78 @@ let teste = {
 };
 
 
+//Getters e setters
+
+
+//array de objetos
+
+
+
+let arrayObj = [
+    {
+        nome:'joao',
+        idade:27
+    }, {
+        nome:'pedro',
+        idade:15
+    }, {
+        nome:'ana',
+        idade:2
+    }
+
+
+];
+
+
+console.log(arrayObj[0].nome, arrayObj[0].idade);
+
+/*
+let usuarioLoc = {
+    posicao:0,
+    atual:function(){
+        return arrayObj[this.posicao];
+    },
+    proximo:function(){
+        return ++this.posicao;
+    },
+    anterior:function(){
+        return --this.posicao;
+    }
+};
+
+
+console.log(usuarioLoc.atual());
+
+usuarioLoc.proximo();
+
+console.log(usuarioLoc.atual());
+
+*/
+
+
+//Se eu quiser chamar uma função como uma propriedade, uso a palavra reservada get
+
+
+
+let usuarioLoc = {
+    posicao:0,
+    get atual(){
+        return arrayObj[this.posicao];
+    },
+    set atual(posicao){
+        this.posicao = posicao;
+    },
+    proximo:function(){
+        return ++this.posicao;
+    },
+    anterior:function(){
+        return --this.posicao;
+    }
+};
+
+//desse modo
+
+console.log(usuarioLoc.atual);
+usuarioLoc.atual = 2;
+
+console.log(usuarioLoc.atual);
