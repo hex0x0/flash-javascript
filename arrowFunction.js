@@ -38,3 +38,4 @@ let addServer = (cidade) => (
 console.log(addServer('brasília'));
 
 
+//se você não usar var na declaração da variável, o escopo dela é global
